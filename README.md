@@ -1,2 +1,0 @@
-# API
-tour-mate API.
