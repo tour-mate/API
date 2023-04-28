@@ -19,13 +19,13 @@ data.Hotel_Address = data.Hotel_Address.str.replace("United Kingdom", "UK")
 data["countries"] = data.Hotel_Address.apply(lambda x: x.split(' ')[-1])
 print(data.countries.unique())
 
-# data.drop(['Additional_Number_of_Scoring',
-#        'Review_Date','Reviewer_Nationality',
-#        'Negative_Review', 'Review_Total_Negative_Word_Counts',
-#        'Total_Number_of_Reviews', 'Positive_Review',
-#        'Review_Total_Positive_Word_Counts',
-#        'Total_Number_of_Reviews_Reviewer_Has_Given', 'Reviewer_Score',
-#        'days_since_review', 'lat', 'lng'],1,inplace=True)
+data.drop(['Additional_Number_of_Scoring',
+       'Review_Date','Reviewer_Nationality',
+       'Negative_Review', 'Review_Total_Negative_Word_Counts',
+       'Total_Number_of_Reviews', 'Positive_Review',
+       'Review_Total_Positive_Word_Counts',
+       'Total_Number_of_Reviews_Reviewer_Has_Given', 'Reviewer_Score',
+       'days_since_review', 'lat', 'lng'],1,inplace=True)
 
 def impute(column):
     column = column[0]
