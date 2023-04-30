@@ -10,7 +10,7 @@ from nltk import word_tokenize,sent_tokenize
 nltk.download('punkt')
 nltk.download('stopwords')
 
-data = pd.read_csv("db.csv")
+data = pd.read_csv("pamith.csv")
 data.head()
 
 # Replacing "United Kingdom with "UK"
@@ -66,6 +66,6 @@ def recommend_hotel(location, description):
     country.drop_duplicates(subset='Hotel_Name', keep='first', inplace=True)
     country.sort_values('Average_Score', ascending=False, inplace=True)
     country.reset_index(inplace=True)
-    return country[["Hotel_Name","Hotel_Address","places_visited","Average_Score","image_url"]].head()
+    return country[["Hotel_Name","Hotel_Address","places_visited","Average_Score","image_url","price","restaurant"]].head()
 
 
