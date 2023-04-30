@@ -10,7 +10,7 @@ from nltk import word_tokenize,sent_tokenize
 nltk.download('punkt')
 nltk.download('stopwords')
 
-data = pd.read_csv("pamith.csv")
+data = pd.read_csv("final_dataset.csv")
 data.head()
 
 # Replacing "United Kingdom with "UK"
